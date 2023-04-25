@@ -3199,6 +3199,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
 document.getElementById("year").innerHTML = new Date().getFullYear();
+var org = "spothings";
+var url = "https://api.github.com/orgs/".concat(org, "/repos");
+fetch(url).then(function (response) {
+  return response.json();
+}).then(function (data) {
+  var contributors = new Set();
+  data.forEach(function (repo) {
+    var repoUrl = repo.contributors_url;
+    fetch(repoUrl).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      data.forEach(function (contributor) {
+        contributors.add(contributor.login);
+      });
+    })["finally"](function () {
+      var list = document.getElementById("contributors");
+      var text = "";
+      contributors.forEach(function (contributor) {
+        text += "".concat(contributor, ", ");
+      });
+      text = text.slice(0, -2);
+      list.textContent = text;
+    });
+  });
+});
 
 /***/ }),
 
