@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>spothings</title>
+     <link rel="shortcut icon" href="public/asset/img/spothings.png" type="image/x-icon" />
+     <link rel="stylesheet" href="public/scss/min.css">
+</head>
+<body>
+     <div class="container col-md-5 mt-5">
+          <a href="/"><img src="public/asset/img/spothings.png" class="logo" alt="logo"></a>
+          <ul class="nav justify-content-center mt-4">
+               <li class="nav-item">
+                    <a class="nav-link" href="/projects.html">Projects</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link fw-bold active" aria-current="page" href="/contributor.html">Contributor</a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+               </li>
+          </ul>
+          <div class="center-text mt-4">
+               <ul id="contributors"></ul>
+               <a href="https://github.com/spothings" class="btn btn-outline-secondary mt-5" role="button" aria-pressed="true">
+                    <img height="20" width="32" src="https://cdn.simpleicons.org/github" />
+                    GitHub
+               </a>
+          </div>
+     </div>
+
+     <div class="fixed-buttom center-text mt-5 pb-3">
+          <div class="container">
+               <p>&copy; 2023 ~ Made with ❤️ by 
+                    <a href="https://bukanspot.github.io">
+                         bukanspot
+                    </a>
+               </p>
+          </div>
+     </div>
+
+     <script src="public/js/app.js"></script>
+
+     <script>
+          const org = "spothings";
+          const url = `https://api.github.com/orgs/${org}/repos`;
+    
+          fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              const contributors = new Set();
+              data.forEach(repo => {
+                const repoUrl = repo.contributors_url;
+                fetch(repoUrl)
+                  .then(response => response.json())
+                  .then(data => {
+                    data.forEach(contributor => {
+                      contributors.add(contributor.login);
+                    });
+                  })
+                  .finally(() => {
+                    const list = document.getElementById("contributors");
+                    let text = "";
+                    contributors.forEach(contributor => {
+                      text += `${contributor}, `;
+                    });
+                    text = text.slice(0, -2);
+                    list.textContent = text;
+                  });
+              });
+            });
+        </script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Daftar Kontributor</title>
+  </head>
+  <body>
+    <ul id="contributors"></ul>
+    <script>
+      const org = "spothings";
+      const url = `https://api.github.com/orgs/${org}/repos`;
+
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          const contributors = new Set();
+          data.forEach(repo => {
+            const repoUrl = repo.contributors_url;
+            fetch(repoUrl)
+              .then(response => response.json())
+              .then(data => {
+                data.forEach(contributor => {
+                  contributors.add(contributor.login);
+                });
+              })
+              .finally(() => {
+                const list = document.getElementById("contributors");
+                let text = "";
+                contributors.forEach(contributor => {
+                  text += `${contributor}, `;
+                });
+                text = text.slice(0, -2);
+                list.textContent = text;
+              });
+          });
+        });
+    </script>
+  </body>
+</html> -->
