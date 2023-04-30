@@ -23,14 +23,14 @@
                </li>
           </ul>
           <div class="center-text mt-4">
-            <p>This is a list of usernames from our contributors, but this list is not purely from our contributors because it is taken from all contributors from the repository including the cloned repository.</p>
-            <div class="card border-success mb-3">
-              <div class="card-header bg-transparent border-success">api.github.com/orgs/spothings/repos</div>
-              <div class="card-body text-success">
-                <p class="card-text" id="contributors"></p>
-              </div>
-              <div class="card-footer bg-transparent border-success">This data is obtained from GitHub API and assisted by Bing Chat to display it here ❤️</div>
-            </div>
+               <p data-i18n="contributor"></p>
+               <div class="card border-success mb-3">
+                    <div class="card-header bg-transparent border-success">api.github.com/orgs/spothings/repos</div>
+                         <div class="card-body text-success">
+                              <p class="card-text" id="contributors"></p>
+                         </div>
+                    <div class="card-footer bg-transparent border-success">This data is obtained from GitHub API and assisted by Bing Chat to display it here ❤️</div>
+               </div>
                <!-- <ul id="contributors"></ul> -->
                <a href="https://api.github.com/orgs/spothings/repos" class="btn btn-outline-secondary mt-5" role="button" aria-pressed="true">
                     <img height="20" width="32" src="https://cdn.simpleicons.org/github" />
@@ -46,6 +46,15 @@
                          bukanspot
                     </a>
                </p>
+               <div class="btn-group" role="group">
+                    <p data-i18n="change-laguage">
+                    </p>
+                    <a data-i18n="language" data-bs-toggle="dropdown" aria-expanded="false"></a>
+                    <ul class="dropdown-menu">
+                      <li><a id="en" class="dropdown-item">English</a></li>
+                      <li><a id="id" class="dropdown-item">Indonesia</a></li>
+                    </ul>
+               </div>
           </div>
      </div>
 
