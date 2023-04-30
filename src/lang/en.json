@@ -6,5 +6,10 @@
      "contact3": "For those of you who want to make a donation, we would really appreciate it. Donations can be made through PayPal.",
      "contributor": "This is a list of usernames from our contributors, but this list is not purely from our contributors because it is taken from all contributors from the repository including the cloned repository.",
      "project": "Here is a glimpse of some of the projects we have worked on, to see more please visit our Github Organisation",
-     "student": "For students, we have several titles that can be used as final assignments. Or if you already have a title and have difficulty working on it, please contact us."
+     "student": "For students, we have several titles that can be used as final assignments. Or if you already have a title and have difficulty working on it, please contact us.",
+     
+     "View-Project": "View Project",
+     "Water-Controller": "Water Controller (IoT-Based Automatic Faucet) is an IoT tool or device where the tool can be used to control or monitor water. his device is integrated with the Telegram bot to provide notifications regarding the state of the device to users.",
+     "Native-Connect": "Native Connect is a device used to monitor three-pass electricity. This project uses native PHP to receive data from ESP32 and display it as a graph with chart.js",
+     "Glance-Maps": "GlanceMaps is a set of hardware that is implanted in a helmet to be used as a navigation aid which in its work is accompanied by a software in the form of a mobile application that will read navigation instructions from Google Maps and will send them to the screen visually."
 }
