@@ -3225,6 +3225,39 @@ fetch(url).then(function (response) {
   });
 });
 
+// Change Language
+var defaultLanguage = 'en'; // set default language
+var currentLanguage = defaultLanguage;
+function switchLanguage(language) {
+  // load new language file and update text content
+  fetch("/src/lang/".concat(language, ".json")).then(function (response) {
+    return response.json();
+  }).then(function (data) {
+    var elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(function (element) {
+      var key = element.dataset.i18n;
+      element.textContent = data[key];
+    });
+  })["catch"](function (error) {
+    return console.error(error);
+  });
+}
+document.getElementById('en').addEventListener('click', function () {
+  if (currentLanguage !== 'en') {
+    currentLanguage = 'en';
+    switchLanguage(currentLanguage);
+  }
+});
+document.getElementById('id').addEventListener('click', function () {
+  if (currentLanguage !== 'id') {
+    currentLanguage = 'id';
+    switchLanguage(currentLanguage);
+  }
+});
+
+// load default language
+switchLanguage(defaultLanguage);
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
