@@ -1,8 +1,8 @@
 {
      "language": "Click here to change language",
 
-     "home": "Spothings adalah organisasi yang mengerjakan proyek Internet of Things. Sebagian besar proyek adalah sumber terbuka dan beberapa sumber tertutup. Untuk source code proyek yang sedang dikerjakan dipublikasikan di GitHub. Punya ide kreatif? Beritahu kami. Spothings... make everything automatic and make things easier.",
-     "contact1": "Untuk saat ini, kami hanya memiliki email untuk dihubungi. Jika Anda memiliki sesuatu untuk diberitahukan kepada kami, silakan kirim email ke indrawahyu@duck.com. Kami sangat senang jika Anda ingin berkontribusi atau memiliki ide kreatif untuk diwujudkan.",
+     "home": "Spothings adalah organisasi yang mengerjakan proyek Internet of Things. Sebagian besar proyek yang dikerjakan adalah sumber terbuka (open source) dan beberapa sumber tertutup (close source). Untuk source code proyek yang sedang dikerjakan dipublikasikan di GitHub. Punya ide kreatif? Silahkan hubungi kami. Spothings... make everything automatic and make things easier.",
+     "contact1": "Untuk saat ini, kami hanya memiliki kontak email untuk dihubungi. Jika Anda memiliki sesuatu untuk diberitahukan kepada kami, silakan kirim email ke indrawahyu@duck.com. Kami sangat senang jika Anda ingin berkontribusi atau memiliki ide kreatif untuk diwujudkan.",
      "contact2": "Kami menerima proyek nyata untuk direalisasikan. Misalnya, jika Anda memiliki ide kreatif untuk mempermudah pekerjaan sehari-hari tetapi tidak memahami coding atau elektronik, kami dapat membantu mewujudkan ide Anda.",
      "contact3": "Bagi Anda yang ingin memberikan donasi, kami sangat menghargainya. Donasi dapat dilakukan melalui PayPal.",
      "contributor": "Ini adalah daftar nama pengguna dari kontributor kami, tetapi daftar ini tidak murni dari kontributor kami karena diambil dari semua kontributor dari repositori termasuk kloning repositori.",
@@ -11,6 +11,6 @@
      
      "View-Project": "Lihat Projek",
      "Water-Controller": "Pengontrol Air (Kran Otomatis Berbasis IoT) adalah alat atau perangkat IoT dimana alat tersebut dapat digunakan untuk mengontrol atau memonitor air. perangkatnya terintegrasi dengan bot Telegram untuk memberikan notifikasi terkait keadaan perangkat kepada pengguna.",
-     "Native-Connect": "Native Connect adalah perangkat yang digunakan untuk memantau listrik tiga jalur. Proyek ini menggunakan PHP asli untuk menerima data dari ESP32 dan menampilkannya sebagai grafik dengan chart.js",
-     "Glance-Maps": "GlanceMaps adalah seperangkat perangkat keras yang ditanamkan pada helm untuk digunakan sebagai alat bantu navigasi yang dalam pekerjaannya disertai perangkat lunak berupa aplikasi seluler yang akan membaca petunjuk navigasi dari Google Maps dan akan mengirimkannya ke layar. secara visual."
+     "Native-Connect": "Native Connect adalah perangkat yang digunakan untuk memantau listrik tiga pasa. Proyek ini menggunakan PHP murni untuk menerima data dari ESP32 dan menampilkannya sebagai grafik dengan chart.js",
+     "Glance-Maps": "GlanceMaps merupakan set perangkat keras yang ditanamkan di helm untuk digunakan sebagai alat bantu navigasi yang dalam kerjanya ditemani dengan sebuah perangkat lunak berupa aplikasi mobile yang akan membaca instruksi navigasi dari Google Maps dan akan mengirimkannya ke layar secara visual."
 }
